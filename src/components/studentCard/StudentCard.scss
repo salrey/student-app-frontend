@@ -1,0 +1,10 @@
+.studentCard {
+    > * {
+        margin-bottom: 8px;
+    }
+
+    // studentCard targets whole element and then takes __name since it's nested under studentCard
+    &__name {
+        font-weight: 600
+    }
+}

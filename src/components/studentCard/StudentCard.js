@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './StudentCard.scss'
+
 const StudentCard = ({student}) => {
 
     const {pic, firstName, lastName, email, company, skill, grades} = student;
@@ -14,7 +16,7 @@ const StudentCard = ({student}) => {
             <div>
                 <img src={pic} />
             </div>
-            <div>
+            <div className="studentCard__name">
                 {`${firstName} ${lastName}`}
             </div>
             <div>
