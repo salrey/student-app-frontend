@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import StudentCard from '../studentCard/StudentCard';
+import './StudentList.scss';
 
 const StudentList = () => {
     //hooks
@@ -22,11 +23,10 @@ const StudentList = () => {
 
     //return or JSX
     return (
-        <div>
+        <div className="studentList">
             {students.map((student) => {
                 return (
                     <div>
-                        {/* {student.firstName} */}
                         <StudentCard student={student}/>
                     </div>
                 )

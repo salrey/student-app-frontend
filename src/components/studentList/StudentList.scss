@@ -1,0 +1,11 @@
+.studentList {
+    width: 600px;
+    //if using three values below the last value is implied to be auto
+    margin: 10vh auto 10vh;
+    height: 80vh;
+    background-color: white;
+    overflow-y: scroll;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #B6B6B6;
+
+}
