@@ -7,4 +7,11 @@ describe('Search bar component', () => {
         const placeholderText = screen.queryByPlaceholderText(/search by name/i);
         expect(placeholderText).toBeInTheDocument();
     })
+
+    it('shows the searchTerm when it is provided', () => {
+        render(<SearchBar searchTerm={('Test searchTerm')}/>);
+        //to check what's being inputted use display value vs. getByText
+        const placeholderText = screen.getByDisplayValue(/Test searchTerm/i);
+        expect(placeholderText).toBeInTheDocument();
+    })
 })
