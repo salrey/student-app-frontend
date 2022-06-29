@@ -1,3 +1,5 @@
+@import '../../designUtils/colors';
+
 .studentList {
     width: 600px;
     //if using three values below the last value is implied to be auto
@@ -6,7 +8,7 @@
     background-color: white;
     overflow-y: scroll;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px #B6B6B6;
+    box-shadow: 0px 2px 5px $shadow-gray;
 
     &__noResults {
         font-weight: 600;

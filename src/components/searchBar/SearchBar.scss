@@ -1,15 +1,17 @@
+@import '../../designUtils/colors';
+
 .searchBar {
     width: 92%;
     height: 30px;
     padding: 5px 10px;
     border: none;
-    border-bottom: 2px solid #c4c1c1;
+    border-bottom: 2px solid $background-gray;
     margin: 10px;
     font-size: 15px; 
     color: #9f9d9d;
     &:focus {
         outline: none;
-        border-bottom: 2px solid #858585;
+        border-bottom: 2px solid $highlight-gray;
     }
 
 }
