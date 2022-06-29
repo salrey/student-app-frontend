@@ -13,28 +13,26 @@ const StudentCard = ({student}) => {
 
     return (
         <div className='studentCard'>
-            <div>
-                <img src={pic} />
+            <div className='studentCard__profilePic'>
+                <img src={pic} alt='person'/>
             </div>
-            <div className="studentCard__name">
-                {`${firstName} ${lastName}`}
+            <div className='studentCard__info'>
+                <div className="studentCard__name">
+                    {`${firstName} ${lastName}`}
+                </div>
+                <div className='studentCard__details'>
+                    Email: {email}
+                </div>
+                <div className='studentCard__details'>
+                    Company: {company}
+                </div>
+                <div className='studentCard__details'>
+                    Skill: {skill}
+                </div>
+                <div className='studentCard__details'>
+                    Average: {calculateAverage(grades)}%
+                </div>
             </div>
-            <div>
-                Email: {email}
-            </div>
-            <div>
-                Company: {company}
-            </div>
-            <div>
-                Skill: {skill}
-            </div>
-            <div>
-                Email: {email}
-            </div>
-            <div>
-                Average: {calculateAverage(grades)}%
-            </div>
-
         </div>
     )
 } 
