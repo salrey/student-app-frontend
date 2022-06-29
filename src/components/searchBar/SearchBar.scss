@@ -8,7 +8,7 @@
     border-bottom: 2px solid $background-gray;
     margin: 10px;
     font-size: 15px; 
-    color: #9f9d9d;
+    color: $highlight-font;
     &:focus {
         outline: none;
         border-bottom: 2px solid $highlight-gray;
