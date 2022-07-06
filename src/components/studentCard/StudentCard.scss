@@ -1,13 +1,22 @@
 @import '../../designUtils/colors';
+@import '../../designUtils/fontDesign';
+
 
 .studentCard {
-    display: flex;
+
+    // display: flex;
     padding: 10px;
     border-bottom: 2px solid $background-gray;
+    a {
+        display: flex;
+        text-decoration: none;
+        color: unset;
+    }
 
-    &__profilePic {
+    &__profilePic { 
+
         margin: 8px;
-        // with SASS can nest and won't conflict with anything else
+
         img {
             width: 100px;
             height: 100px;
@@ -18,26 +27,48 @@
 
     &__info {
         margin-left: 20px;
+        width: 70%;
     }
 
-    // studentCard targets whole element and then takes __name since it's nested under studentCard
     &__name {
         font-size: 32px;
         font-weight: 600;
         text-transform: uppercase;
-        margin-bottom: 5px;
-
+        margin-bottom: 8px;
     }
 
-    &__details {
-        padding-left: 15px;
-        font-size: 15px;
-        color: $highlight-gray;
+    &__infoLine {
+        @extend %gray-and-indented;
         line-height: 20px;
     }
 
-    // > * {
-    //     margin-bottom: 8px;
-    // }
+    &__gradesList {
+        @extend %gray-and-indented;
+        margin-top: 10px;
+        span {  
+            min-width: 60px;
+            display: inline-block;
+        }
+        display: none;
+    }
+
+    &__toggleIcons {
+        color: $shadow-gray;
+        padding-top: 8px;
+
+    }
+    
+    &__toggleIcon {
+        cursor: pointer;
+        &:hover {
+            color: black;
+        }
+    }
+
+    @media only screen and (max-width: 440px) { 
+        &__name {
+            font-size: 20px;
+        }
+    }
 
 }

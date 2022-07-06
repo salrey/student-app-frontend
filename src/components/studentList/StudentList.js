@@ -41,7 +41,7 @@ const StudentList = () => {
             {filteredStudents.map((student) => {
                 return (
                     <div>
-                        <StudentCard student={student}/>
+                        <StudentCard student={student} key={student.id}/>
                     </div>
                 )
             })}
